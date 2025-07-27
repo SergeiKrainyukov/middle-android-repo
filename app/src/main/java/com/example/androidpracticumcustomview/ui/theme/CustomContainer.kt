@@ -53,7 +53,7 @@ class CustomContainer @JvmOverloads constructor(
 
         ObjectAnimator.ofFloat(view, "alpha", 0f, 1f).apply {
             interpolator = AccelerateInterpolator()
-            duration = 1000L
+            duration = DEFAULT_ALPHA_DURATION_MILLIS.toLong()
             start()
         }
 

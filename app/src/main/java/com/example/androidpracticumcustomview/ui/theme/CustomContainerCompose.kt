@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 
 const val DEFAULT_ANIMATION_DURATION_MILLIS = 5000
+const val DEFAULT_ALPHA_DURATION_MILLIS = 2000
 
 /*
 Задание:
@@ -36,7 +37,8 @@ const val DEFAULT_ANIMATION_DURATION_MILLIS = 5000
 fun CustomContainerCompose(
     firstChild: @Composable (() -> Unit)?,
     secondChild: @Composable (() -> Unit)?,
-    animationDurationMillis: Int = DEFAULT_ANIMATION_DURATION_MILLIS
+    animationDurationMillis: Int = DEFAULT_ANIMATION_DURATION_MILLIS,
+    alphaDurationMillis: Int = DEFAULT_ALPHA_DURATION_MILLIS
 ) {
     // Блок создания и инициализации переменных
     var visible by remember { mutableStateOf(false) }
@@ -67,7 +69,7 @@ fun CustomContainerCompose(
         AnimatedVisibility(
             visible = visible,
             enter = fadeIn(
-                animationSpec = tween(animationDurationMillis)
+                animationSpec = tween(alphaDurationMillis)
             ),
         ) {
             Column(

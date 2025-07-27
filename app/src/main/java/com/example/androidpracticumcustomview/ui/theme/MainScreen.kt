@@ -31,7 +31,7 @@ fun MainScreen(closeActivity: () -> Unit) {
                     Text("first child")
                 },
                 secondChild = {
-//                    Text("second child")
+                    Text("second child")
                 }
             )
         }

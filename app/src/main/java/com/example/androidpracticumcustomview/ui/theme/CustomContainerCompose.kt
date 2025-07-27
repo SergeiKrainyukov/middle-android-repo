@@ -22,7 +22,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 
-private const val DEFAULT_ANIMATION_DURATION_MILLIS = 5000
+const val DEFAULT_ANIMATION_DURATION_MILLIS = 5000
 
 /*
 Задание:
